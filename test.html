@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="css/style.css">
+	<title>css-垂直居中的N多种办法</title>
+</head>
+	 <style>
+       
+    </style>
+<!--html -->
+<body>
+	<div class='wp'>
+		<!-- 按钮区 -->
+		<div class='btn'>
+			<ul>
+				<li><a href="###" class='btn1 active'>块元素水平居中</a></li>
+				<li><a href="###" class='btn2'>子元素水平居中</a></li>
+				<li><a href="###" class='btn3'>水平垂直居中/定位/子元素定高宽</a></li>
+				<li><a href="###" class='btn4'>水平垂直居中/定位</a></li>
+				<li><a href="###" class='btn5'>水平垂直居中/定位/transform</a></li>
+				<li><a href="###" class='btn6'>水平垂直居中/table-cell</a></li>
+				<li><a href="###" class='btn7'>水平垂直居中/flexbox</a></li>
+			</ul>
+		</div>
+		<!-- 舞台 -->
+		<div class='stage'>
+			<div class="box1 box show" >
+		        <img src="pic/dog.png" alt="">
+		    </div>
+		    <div class="box2 box hide" >
+		        <img src="pic/dog.png" alt="">
+		    </div>
+		    <div class="box3 box hide" >
+		        <img src="pic/dog.png" alt="">
+		    </div>
+		    <div class="box4 box hide" >
+		        <img src="pic/dog.png" alt="">
+		    </div>
+		    <div class="box5 box hide" >
+		        <img src="pic/dog.png" alt="">
+		    </div>
+		    <div class="box6 box hide" >
+		        <img src="pic/dog.png" alt="">
+		    </div>
+		    <div class="box7 box hide" >
+		        <img src="pic/dog.png" alt="">
+		    </div>
+		</div>
+	    
+	</div>
+	<script src='jquery-1.11.1.js'></script>
+	<script>
+		$(function(){
+			/*$(".btn li a").on("click" , function(event){
+				var e = $(event.currentTarget);
+				$(".btn li a.active").removeClass("active");
+				e.addClass("active");
+				console.log(e);
+			});*/
+			$(".btn li a").each( function( index, item ) {
+				$(this).off( "click" ).on( "click" , function() {
+					$(".btn li a.active").removeClass("active");
+					$(this).addClass("active");
+					$(".show").removeClass("show").addClass("hide");
+					$(".box").eq( index ).removeClass("hide").addClass("show");
+				} );
+			} )
+		})
+	</script>
+
+</body>
+</html>

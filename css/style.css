@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul , li{
+    text-decoration: none;
+    list-style-type: none;
+}
+a{
+    display: block;
+    text-decoration: none;
+}
+.wp{
+    width: 1000px;
+    margin:20px auto 0;
+    border:1px solid red;
+    background: yellow;
+}
+.btn{
+    margin:20px 0;
+    text-align: center;
+}
+.btn ul{
+    display: inline-block;
+    overflow: hidden;
+}
+.btn li{
+    float: left;
+    margin: 10px 20px;
+}
+.btn li a{
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #84d61b;
+}
+.btn li a:hover{
+    background: #68a21d;
+}
+.btn li a.active{
+    background: #68a21d;
+}
+
+
+.box{
+    margin:20px;
+    height: 500px;
+    border: 1px solid blue;
+}
+.box1 img{
+    display: block;
+    width: 500px;
+    height: 372px;
+    margin: 0 auto;
+}
+.box2{
+    display: block;
+    height: 372px;
+    text-align: center;
+}
+.box2 img{
+    width: 500px;
+    height: 372px;
+    display: inline-block;
+}
+.box3{
+   position: relative;
+}
+.box3 img{
+    display: block;
+    position: absolute;
+    top:50%;
+    left:50%;
+    margin-top:-186px;
+    margin-left: -250px;
+    width: 500px;
+    height: 372px;
+}
+.box4{
+    position: relative;
+}
+.box4 img{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin:auto;
+}
+.box5{
+    position: relative;
+}
+.box5 img{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate( -50% , -50%);
+}
+
+.box6{
+    width: 800px;
+    height: 500px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.box1{
+    display: none;
+}
+.box2{
+ display: none;
+}
+.box3{
+ display: none;
+}
+.box4{
+ display: none;
+}
+.box5{
+ display: none;
+}
+.box6{
+ display: none;
+}
+.box7{
+  display: none;   
+}
+
+.box7{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
